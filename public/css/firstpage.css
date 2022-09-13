@@ -1,0 +1,481 @@
+#content {
+  margin-top: 20px !important;
+  font-family: "Roboto", sans-serif;
+}
+.card {
+  border: none !important;
+}
+
+.solid {
+  border: 1px solid #000000;
+  width: 20px;
+  margin: -10px;
+}
+.solid1 {
+  border-top: 2px solid #000;
+  width: 20px;
+  margin: 0px;
+}
+.form-content {
+  margin: 20px 0px 20px 5px;
+}
+
+.form-label1 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.1em;
+
+  color: #000000;
+}
+input {
+  border-top: black !important;
+  border-left: black !important;
+  border-right: black !important;
+  outline: none !important;
+}
+
+::placeholder {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.1em;
+  color: #4d4d4d;
+}
+
+.vl {
+  border: 1px solid #898989;
+  height: 340px;
+  position: absolute;
+  left: -2%;
+}
+
+.buttonC {
+  background-color: #000 !important;
+  width: 178px;
+  font-weight: 500 !important;
+  font-size: 24px !important;
+  border-radius: 0 !important;
+  line-height: 28px !important;
+}
+
+.cdiv1 {
+  height: 400px;
+  background: #f0f7ff;
+}
+
+.cdiv2 {
+  font-family: Montserrat;
+  line-height: 44px;
+  font-size: 36px;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.carousel-item {
+  height: 400px !important;
+  background: #f0f7ff !important;
+}
+
+.card1 {
+  background: #fff496 !important;
+}
+
+.card2 {
+  background: #ffbebe !important;
+}
+
+.card-title1 {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 44px;
+  color: #d9d083;
+}
+
+.card-title2 {
+  color: #c79b9b;
+}
+
+.card-text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #595959;
+}
+
+.article-txt {
+  font-family: Montserrat;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.input-group-text {
+  background: linear-gradient(
+    126.06deg,
+    rgba(255, 255, 255, 0) 2.04%,
+    rgba(255, 255, 255, 0.1) 68.44%
+  ) !important;
+}
+
+form > span {
+  box-shadow: none;
+}
+
+form > div {
+  width: 191px !important;
+  height: 45px !important;
+}
+
+.ico {
+  width: 35px;
+  height: 35px;
+}
+
+footer {
+  background: #f0f7ff;
+}
+
+.userIcon {
+  margin-right: 10px;
+}
+
+.costumButtonSubmitBlack {
+  background-color: #000 !important;
+  width: 178px;
+  font-weight: 500 !important;
+  font-size: 24px !important;
+  border-radius: 0 !important;
+  line-height: 28px !important;
+}
+
+.vl2 {
+  border: 1px solid #898989;
+  height: 340px;
+  position: absolute;
+  left: -2%;
+}
+
+/* product detail */
+
+.oldprice {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  display: flex;
+  align-items: flex-end;
+  letter-spacing: 0.1em;
+  text-decoration-line: line-through;
+  color: #9b9b9b;
+}
+
+.percentageoff {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  display: flex;
+  align-items: flex-end;
+  letter-spacing: 0.1em;
+  color: #4946da;
+}
+.newprice {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.1em;
+
+  color: #202020;
+}
+
+.product-description {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.1em;
+
+  color: #7c7c7c;
+}
+
+.Product-Name {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 44px;
+  color: #202020;
+}
+
+.buttonA {
+  width: 276px !important;
+  height: 80px !important;
+  background: #242424 !important;
+
+  font-family: Montserrat !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  font-size: 36px !important;
+  line-height: 44px !important;
+  align-items: center !important;
+  text-align: center !important;
+  letter-spacing: 0.04em !important;
+}
+.unit-left {
+  margin-top: 10px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.1em;
+}
+
+.btn-success {
+  background: #23ff61 !important;
+  border-radius: 2px !important;
+  border: none !important;
+}
+
+.btn-danger {
+  background: #ff3838 !important;
+  border-radius: 2px !important;
+  border: none !important;
+}
+
+.disabled {
+  opacity: 1 !important;
+}
+/* product detail */
+/* DropDown CSS*/
+
+.dropdown:hover > .dropdown-menu {
+  display: block;
+  -moz-box-shadow: 0 4px 2px -2px #ccc;
+  -webkit-box-shadow: 0 4px 2px -2px #ccc;
+  box-shadow: 0 4px 2px -2px #ccc;
+  border-radius: 0%;
+  background: #ccc;
+  background: rgb(233, 232, 232);
+  border: none;
+}
+
+.dropdown > .dropdown-toggle:active {
+  pointer-events: none;
+}
+
+.dropright:hover > .dropdown-menu {
+  display: block;
+  top: 0;
+  left: 100%;
+  -moz-box-shadow: 0 4px 2px -2px #ccc;
+  -webkit-box-shadow: 0 4px 2px -2px #ccc;
+  box-shadow: 0 4px 2px -2px #ccc;
+  border-radius: 0%;
+  background: rgb(233, 232, 232);
+  border: none !important;
+}
+
+.dropright > .dropdown-toggle:active {
+  pointer-events: none;
+}
+
+.dropdown-menu {
+  min-width: 1rem !important;
+  text-align: center !important;
+}
+
+.dropright {
+  position: relative;
+}
+
+/* DropDown CSS*/
+
+.badge {
+  position: relative;
+}
+
+.badge > .icon-button__badge {
+  position: absolute;
+}
+
+.icon-button__badge {
+  bottom: 13px;
+  left: 22px;
+  width: 15px;
+  height: 15px;
+  background: red;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 10px;
+}
+
+.icon-button__badge2 {
+  bottom: 13px;
+  left: 22px;
+  width: 40px;
+  height: 20px;
+  background: rgb(243, 38, 38);
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10%;
+  font-size: 10px;
+}
+/* Badge CSS*/
+
+/* User CSS*/
+
+.UserName {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.1em;
+
+  color: #000000;
+}
+
+/* User CSS*/
+
+.title {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 59px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.1em;
+  color: #000000;
+}
+
+/*404*/
+
+.sous-title {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 44px;
+  letter-spacing: 0.1em;
+  color: #202020;
+  margin-top: -50px;
+}
+
+.description {
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 29px;
+  letter-spacing: 0.1em;
+  text-align: left;
+}
+
+.imageSize {
+  width: 100%;
+  height: auto;
+}
+
+.contactcard {
+  height: 100%;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 4px;
+  padding: 2rem;
+  justify-content: center;
+  top: 15%;
+  bottom: 20%;
+  filter: drop-shadow(0px 0px 47px rgba(0, 0, 0, 0.25));
+}
+
+.contacttitle {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 29.587px;
+  line-height: 36px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+  padding-left: -200px;
+}
+
+.phonecard {
+  margin-right: -200px !important;
+}
+
+.iconSize > i {
+  color: #4a4aff;
+}
+
+/*404*/
+
+/* new card */
+.content:not(.card-footer):hover {
+  overflow: hidden;
+  transition: 1s;
+  filter: blur(2px);
+}
+
+.card-product {
+  background-color: #efefef !important;
+  min-height: 380px !important;
+}
+.card-footer {
+  display: none;
+}
+
+.card:hover .card-footer {
+  display: block;
+}
+
+.AddToCart-button {
+  background: #ffffff !important;
+  width: auto;
+  margin-top: 5px !important;
+  font-weight: 500 !important;
+  font-size: 16px !important;
+  border: 2px solid #00ffb2 !important;
+  border-top: none !important;
+  border-right: none !important;
+  border-left: none !important;
+  line-height: 28px !important;
+  display: none;
+}
+
+.zoom:hover section {
+  display: block;
+  transition: all 1s ease-in;
+}
+/* new card */

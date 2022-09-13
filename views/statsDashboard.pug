@@ -1,0 +1,324 @@
+doctype html
+head
+  // Required meta tags
+  meta(charset='utf-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  // Bootstrap CSS
+  link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css' integrity='sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO' crossorigin='anonymous')
+  link(href='https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap' rel='stylesheet')
+  title
+    | Youxi
+  link(href='https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto:wght@300;400;500;700;900&display=swap' rel='stylesheet')
+  // fontawesome
+  link(rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.2/css/all.css' integrity='sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr' crossorigin='anonymous')
+  link(rel='stylesheet' href='css/style.css')
+  link(rel='stylesheet' href='css/alert.css')
+  // Sarah links
+#wrapper
+  .overlay
+  // sidebar
+  include _sidebarAdmin
+  +sideBarAdmin(0)
+  // sidebar-end
+  // Page Content
+  #page-content-wrapper
+    #content
+      .container-fluid.p-0.px-lg-0.px-md-0
+        // Topbar
+        nav.navbar.navbar-expand.navbar-light.my-navbar
+          // Sidebar Toggle (Topbar)
+          #bar.nav-icon1.hamburger.animated.fadeInLeft.is-closed(type='button' data-toggle='offcanvas')
+            span
+            span
+            span
+          ul.navbar-nav.ml-auto
+            // User Information
+            li.nav-item.dropdown
+              a#userDropdown.nav-link(href='#' role='button' data-toggle='dropdown')
+                span.UserName Admin
+                img.img-profile(src='img/youxi logo.svg')
+                i.fas.fa-chevron-down.btn.fas-topbar
+              // Dropdown - User Information
+              .dropdown-menu(aria-labelledby='userDropdown')
+                a.dropdown-item(href='#')
+                  i.fas.fa-user.fa-sm.fa-fw.mr-2.text-gray-400
+                  |                                         Profile
+                a.dropdown-item(href='#')
+                  i.fas.fa-cogs.fa-sm.fa-fw.mr-2.text-gray-400
+                  |                                         Settings
+                a.dropdown-item(href='#')
+                  i.fas.fa-list.fa-sm.fa-fw.mr-2.text-gray-400
+                  |                                         Activity Log
+                .dropdown-divider
+                a.dropdown-item(href="/api/v1/users/logout")
+                  i.fas.fa-sign-out-alt.fa-sm.fa-fw.mr-2.text-gray-400
+                  |                                         Logout
+        // end of topbar
+        // page main body
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Orders Status Today</h5>
+                            <canvas id="myChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Order Status All Time</h5>
+                            <canvas id="myChart2"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3">
+                  <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Total Profit</h5>
+                          <p class="card-text" id="revenueAllText"></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Pending Profit</h5>
+                          <p class="card-text" id="pendingAllText"></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">7 Days Stats</h5>
+                            <canvas id="myChart3"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        // footer                            
+        include _footerAdmin
+  script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js' integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo' crossorigin='anonymous')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js' integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49' crossorigin='anonymous')
+  script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js' integrity='sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy' crossorigin='anonymous')
+  script(src='https://code.jquery.com/jquery-3.5.1.js' integrity='sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=' crossorigin='anonymous')
+  script(src='https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js' integrity='sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p' crossorigin='anonymous')
+  script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js' integrity='sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT' crossorigin='anonymous')
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+script.
+  $('#bar').click(function () {
+  $(this).toggleClass('open');
+  $('#page-content-wrapper ,#sidebar-wrapper').toggleClass('toggled');
+  });
+script.
+  var sevenDaysRaw = JSON.parse("#{stats7Days}".replace(/&quot;/g, '"'));
+  var allRaw = JSON.parse("#{statsDataAll}".replace(/&quot;/g, '"'));
+  var todaysRaw = JSON.parse("#{statsDataToday}".replace(/&quot;/g, '"'));
+  var {stats} = todaysRaw;
+  var statsToday = [[],[],[]];
+  stats.forEach((el)=>{
+      statsToday[0].push(el._id);
+      statsToday[1].push(el.number);
+      statsToday[2].push(el.revenue);
+  });
+  var checker = [["ordered", "processing", "delivered"],[false,false,false]];
+  if(statsToday[0].length<3){
+      statsToday[0].forEach((el)=>{
+          if(el == checker[0][0]){
+              checker[1][0] = true;
+          }else if(el == checker[0][1]){
+              checker[1][1] = true;
+          }else if(el == checker[0][2]){
+              checker[1][2] = true;
+          }
+      });
+    checker[1].forEach((el,i)=>{
+        if(el == false){
+            statsToday[0].push(checker[0][i]);
+            statsToday[1].push(0);
+            statsToday[2].push(0);
+        }
+    })  
+  }
+  var ctx = document.getElementById("myChart").getContext("2d");
+  var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: statsToday[0],
+      datasets: [
+        {
+          label :'Orders',
+          backgroundColor :'#4dc9f6',
+          data: statsToday[1],
+        },
+      ],
+    },
+    options: {
+        scales: {
+            y: {
+              ticks: {
+                    precision: 0
+                    },
+                beginAtZero: true,
+            }
+        }
+    }
+  });
+  
+  stats = allRaw.stats;
+  var statsAll = [[],[],[]];
+  stats.forEach((el)=>{
+      statsAll[0].push(el._id);
+      statsAll[1].push(el.number);
+      statsAll[2].push(el.revenue);
+  });
+
+  if(statsAll[0].length<3){
+      statsAll[0].forEach((el)=>{
+          if(el == checker[0][0]){
+              checker[1][0] = true;
+          }else if(el == checker[0][1]){
+              checker[1][1] = true;
+          }else if(el == checker[0][2]){
+              checker[1][2] = true;
+          }
+      });
+    checker[1].forEach((el,i)=>{
+        if(el == false){
+            statsAll[0].push(checker[0][i]);
+            statsAll[1].push(0);
+            statsAll[2].push(0);
+        }
+    })  
+  }
+
+  var ctx2 = document.getElementById("myChart2").getContext("2d");
+  var myChart2 = new Chart(ctx2, {
+    type: 'bar',
+    data: {
+      labels: statsAll[0],
+      datasets: [
+        {
+          label :'Orders',
+          backgroundColor :'rgb(255, 99, 132)',
+          data: statsAll[1],
+        },
+      ],
+    },
+    options: {
+        scales: {
+            y: {
+              ticks: {
+                    precision: 0
+                    },
+                beginAtZero: true,
+            }
+        }
+    }
+  });
+  var deliveredIndexAll;
+  var pendingRevenue = 0;
+  statsAll[0].forEach((el,i)=>{
+    if(el== "delivered"){
+      deliveredIndexAll = i;
+    }else{
+      pendingRevenue += statsAll[2][i];
+    }
+  });
+  document.getElementById("revenueAllText").innerHTML = `${statsAll[2][deliveredIndexAll]} Da`;
+  document.getElementById("pendingAllText").innerHTML = `${pendingRevenue} Da`;
+
+  const date = new Date();
+  date.setDate(date.getDate() +1);
+  let datesTable = [];
+  for(var i =0 ; i<7;i++){
+    datesTable.unshift(new Date(date.setDate(date.getDate() - 1)).toISOString().split("T")[0]);
+  }
+  //console.log(datesTable);
+  //console.log(sevenDaysRaw);
+  
+  stats = sevenDaysRaw.stats;
+  //console.log(stats);
+  let sevenDaysStats = [[],[],[],[]];
+  sevenDaysStats[0] = datesTable;
+  //console.log(sevenDaysStats[0]);
+
+  function findWithAttr(array, date, status) {
+    for(var i = 0; i < array.length; i += 1) {
+        if(array[i]._id.createdAt.split("T")[0] === date && array[i]._id.status === status) {
+            return i;
+        }
+    }
+    return -1;
+  }
+  // 1-ordered 2-processing 3-delivered
+
+  sevenDaysStats[0].forEach((el,i)=>{
+    var x = findWithAttr(stats,el,"ordered");
+    if(x===-1){
+      sevenDaysStats[1].push(0);
+    }else{
+      sevenDaysStats[1].push(stats[x].number);
+    }
+  });
+
+  sevenDaysStats[0].forEach((el,i)=>{
+    var x = findWithAttr(stats,el,"processing");
+    if(x===-1){
+      sevenDaysStats[2].push(0);
+    }else{
+      sevenDaysStats[2].push(stats[x].number);
+    }
+  });
+
+  sevenDaysStats[0].forEach((el,i)=>{
+    var x = findWithAttr(stats,el,"delivered");
+    if(x===-1){
+      sevenDaysStats[3].push(0);
+    }else{
+      sevenDaysStats[3].push(stats[x].number);
+    }
+  });
+
+  //console.log(sevenDaysStats);
+
+  var ctx3 = document.getElementById("myChart3").getContext("2d");
+  var myChart3 = new Chart(ctx3, {
+    type: 'bar',
+    data: {
+      labels: sevenDaysStats[0],
+      datasets: [
+        {
+          label :'ordered',
+          backgroundColor :'rgb(255, 99, 132)',
+          data: sevenDaysStats[1],
+        },
+        {
+          label :'processing',
+          backgroundColor :'rgb(144, 66, 255)',
+          data: sevenDaysStats[2],
+        },
+        {
+          label :'delivered',
+          backgroundColor :'rgb(75, 12, 98)',
+          data: sevenDaysStats[3],
+        },
+      ],
+    },
+    options: {
+        scales: {
+            y: {
+              ticks: {
+                    precision: 0
+                    },
+                beginAtZero: true,
+            }
+        }
+    }
+  });

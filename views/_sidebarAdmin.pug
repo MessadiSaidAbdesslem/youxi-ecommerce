@@ -1,0 +1,56 @@
+mixin sideBarAdmin(selected)
+  nav#sidebar-wrapper.fixed-top.align-top(role='navigation')
+    .simplebar-content(style='padding: 0px;')
+      a.sidebar-brand(href='#')
+        img(src='/img/youxi logo.svg')
+        img(src='/img/adminpanel.svg')
+      ul.navbar-nav.align-self-stretch
+        li.has-sub
+          if(selected == 0)
+            a.nav-link.text-left.active(href='/dashboard' role='button')
+              i.fas.fa-tachometer-alt
+              |  Dashboard
+          else
+            a.nav-link.text-left(href='/dashboard' role='button')
+              i.fas.fa-tachometer-alt
+              |  Dashboard
+
+        li.has-sub
+          if(selected == 1)
+            a.nav-link.text-left.active(href='/users' role='button')
+              i.far.fa-user-circle
+              |  Users
+          else
+            a.nav-link.text-left(href='/users' role='button')
+              i.far.fa-user-circle
+              |  Users
+
+        li.has-sub
+          if(selected == 2)
+            a.nav-link.text-left.active(href='/products' role='button')
+              i.fab.fa-product-hunt
+              |  Products
+          else 
+            a.nav-link.text-left(href='/products' role='button')
+              i.fab.fa-product-hunt
+              |  Products
+      
+        li.has-sub
+          if(selected == 3)
+            a.nav-link.text-left.active(href='/categories' role='button')
+              i.fab.fa-delicious
+              |  Categories
+          else
+            a.nav-link.text-left(href='/categories' role='button')
+              i.fab.fa-delicious
+              |  Categories
+
+        li.has-sub
+          if(selected == 4)
+            a.nav-link.text-left.active(href='/orders' role='button')
+              i.fas.fa-shopping-cart
+              |  Orders
+          else
+            a.nav-link.text-left(href='/orders' role='button')
+              i.fas.fa-shopping-cart
+              |  Orders
